@@ -1,0 +1,188 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Smooth fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+   NAVBAR STYLES
+============================== */
+/* Navbar */
+.navbar {
+    z-index: 1050;
+  }
+  
+  #navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #navbar a.nav-link {
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  #brandName {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .brand-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: -10px;
+    color: white;
+  }
+  
+  /* Navbar when scrolled */
+  #navbar.scrolled {
+    background-color: white !important;
+  }
+  
+  #navbar.scrolled a.nav-link,
+  #navbar.scrolled .brand-text {
+    color: black !important;
+  }
+  
+  /* Responsive Navbar */
+ /* Responsive Navbar */
+@media (max-width: 992px) {
+    #navbar {
+        background-color: white !important;
+    }
+
+    #navbar a.nav-link,
+    .brand-text {
+        color: black !important;
+        font-size: 1rem !important;  /* Corrected */
+    }
+
+    #navbar .navbar-toggler {
+        border-color: black;
+    }
+}
+
+
+/* ==============================
+   ACADEMIC STRANDS SECTION (UPDATED)
+============================== */
+/* Ensure the academic section spans the full width */
+#academic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Image section remains full width */
+.academic-image {
+    background: url('carousel1.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* "ABOUT" text styling (center the text horizontally and vertically) */
+.academic-image p {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
+}
+
+
+.academic-content {
+    width: 100%;
+    max-width: 1000px; /* Restrict content width for better readability */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 60vh;
+    box-sizing: border-box;
+    margin: auto; /* Center content */
+}
+
+.academic-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Remove extra margin to prevent overflow */
+.academic-content p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: black;
+    text-align: start;
+    margin: 0; /* Remove margins causing unnecessary spacing */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Adjust the background image for smaller screens */
+    
+    .academic-image p {
+        font-size: 3rem;
+        left: 50%; /* Move to center */
+        transform: translateX(-50%);
+    }
+
+    /* Adjust title and text for smaller screens */
+    .academic-content h2 {
+        font-size: 2rem;
+    }
+
+    .academic-content p {
+        font-size: 1rem;
+    }
+
+    /* Make text inside about-content more mobile-friendly */
+    .academic-content {
+        padding: 20px; /* Reduce padding */
+    }
+}
+
+
+
+
+
+
+
+

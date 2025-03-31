@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Page</title>
+    <!-- Include the Bootstrap 5.0.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Link to Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" id="navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+      <!-- Logo and Brand Name -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" id="brandName">
+          <img src="logo.png" alt="Logo" width="100" height="50" class="me-2">
+          <span class="brand-text">WEST CAMPUS</span>
+        </a>
+      </div>
+  
+      <!-- Navbar Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarAboutDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-info-circle"></i> ABOUT
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="home_of_excellence.html">The Home of Excellence</a></li>
+              <li><a class="dropdown-item" href="awards_recognition.html">Awards & Recognition</a></li>
+              <li><a class="dropdown-item" href="westernet.html">Westernet</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="all_announcement.html"><i class="fas fa-bullhorn"></i> ANNOUNCEMENT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="main_news.html"><i class="fas fa-newspaper"></i> NEWS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-book"></i> RESEARCH
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="qualitative.html">Qualitative Research</a></li>
+              <li><a class="dropdown-item" href="quantitative.html">Quantitative Research</a></li>
+              <li><a class="dropdown-item" href="investigatory.html">Science Investigatory Project</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="all-events.html"><i class="fas fa-calendar-alt"></i> EVENTS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<!-- Main Section -->
+<!-- Main Section -->
+<section id="main-section">
+  <div class="container-fluid p-0">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      
+      <!-- Static Text Content (Outside the Sliding Images) -->
+      <div class="carousel-caption">
+        <h2 class="carousel-title">Welcome to</h2>
+        <p class="carousel-subtitle">Biñan City Senior High</p>
+        <p class="carousel-subtitle">School-West Campus</p>
+        <a href="home_of_excellence.html" class="carousel-description" style="text-decoration: none; color: white;">
+          <p class="carousel-description">
+            THE HOME OF EXCELLENCE AND HUMANITY: <br>Unlocking potential, fostering growth <br> and nurturing bright minds and shaping future leaders . . .
+          </p>
+        </a>                        
+      </div>
+
+      <!-- Image Slider -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="carousel1.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="carousel2.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="carousel3.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about-section">
+  <div class="container fade-in">
+    <h3 style="font-weight: bold; color: #0d41a6">Senior High School at Biñan City SHS - West Campus</h3>
+    <h4 style="font-weight: bold; color: #0d41a6">Providing you with a quality senior high school experience in a dynamic learning environment.</h4>
+    <p>Gain access to modern and well-equipped facilities, as well as to valuable educational resources that enhance your learning journey.</p>
+    <p>Learn from dedicated and experienced educators who will guide you through the challenges of senior high school and prepare you for higher education or your chosen career path.</p>
+    <p>Engage in meaningful research projects that encourage you to develop innovative solutions to real-world issues.</p>
+    <p>Enjoy a vibrant campus life with interactive classes, extracurricular activities, academic support programs, and community involvement.</p>
+    <p>Experience a student-centered environment that nurtures well-rounded individuals, empowering you to become future-ready leaders and achievers.</p>
+  </div>
+</section>
+
+<!-- Announcement Section -->
+<section id="announcement-section">
+  <div class="container  fade-in">
+      <!-- Announcement Title and HR Line -->
+      <div class="announcement-header">
+          <h2>Announcement</h2>
+      </div>
+      <hr class="announcement-hr">
+
+      <!-- Main Content and Sub Menu -->
+      <div class="row">
+          <!-- Major Content (70% width) -->
+          <div class="col-md-8 major-content">
+            <p class="announcement-text">
+                <a href="announcement1.html" class="graduation-link">Grade 12 Graduation Ceremony</a>
+            </p>
+            <p class="announcement-text posted-date">Posted: March 15, 2025</p>
+            <p class="announcement-text graduation-description">
+                Biñan City Senior High School – West Campus formally announces the upcoming Grade 12 Graduation Ceremony, a...
+            </p>
+          </div>
+        
+
+          <!-- Sub Menu on the Right (30% width) -->
+          <div class="col-md-4 sub-menu">
+            <ul>
+                <li>
+                    <a href="announcement2.html">Class Suspension Notice Due to Transport Strike</a>
+                    <p>Poster: March 24, 2025</p>
+                    <p class="sub-menu-description">Biñan City Senior High School – West Campus announces the suspension of classes on March 24, 2025, as...</p>
+                </li>
+            </ul>
+          
+            <!-- See More Button -->
+            <a href="all_announcement.html" class="btn btn-primary">See More</a>
+
+          </div>          
+      </div>
+  </div>
+</section>
+
+
+<!-- Academic Strand Section -->
+<section id="academic-strands-section"> 
+  <div class="container">
+      <div class="academic-strands">
+          <!-- Academic Strands Images -->
+          <div class="academic-strands-images">
+              <a href="tilt-image-1.jpg" target="_blank">
+                  <img src="tilt-image-1.jpg" alt="Academic Strand Image 1" class="academic-strands-image">
+              </a>
+              <a href="tilt-image-2.jpg" target="_blank">
+                  <img src="tilt-image-2.jpg" alt="Academic Strand Image 2" class="academic-strands-image">
+              </a>
+              <a href="tilt-image-3.jpg" target="_blank">
+                  <img src="tilt-image-3.jpg" alt="Academic Strand Image 3" class="academic-strands-image">
+              </a>
+          </div>
+
+          <!-- Text Content -->
+          <div class="text-content">
+              <h2>Academic Strands</h2>
+              <hr class="academic-strands-hr">
+              <p>Biñan City Senior High School – West Campus offers three strands: ABM for business and entrepreneurship, HUMSS for social sciences and communication, and STEM for science and technology. These strands equip students with the skills and knowledge needed for future careers and higher education.</p>
+
+              <!-- See More Button -->
+              <a href="academic_strands.html" class="btn btn-primary" style="width: 30%; margin-top: -0px;">See More</a>
+
+              
+
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- School Gallery Section -->
+<section id="school-gallery">
+  <div class="container fade-in">
+    <div class="gallery-content">
+      <!-- Text Content -->
+      <div class="text-content">
+        <h2>School Gallery</h2>
+        <hr> <!-- Horizontal line -->
+        <p>Take a glimpse into Biñan City Senior High School – West Campus through our gallery, featuring the facilities that support learning and student growth. From classrooms to activity areas, these spaces are designed to provide a comfortable and engaging environment where students can study, collaborate, and explore their skills.</p>
+        
+        <!-- View Gallery Button -->
+       <a href="school_gallery.html" class="btn btn-primary" style="width: 35%;">View Gallery</a>
+
+      </div>
+
+      <!-- Bootstrap Carousel with Clickable Images -->
+      <div class="image-content">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="school-gallery1.jpg" target="_blank">
+                <img src="school-gallery1.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 1">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="school-gallery2.jpg" target="_blank">
+                <img src="school-gallery2.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 2">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="gymnasium2.jpg" target="_blank">
+                <img src="gymnasium2.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 3">
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="lecture2.jpg" target="_blank">
+                <img src="lecture2.jpg" class="d-block w-100 gallery-image" alt="Gallery Image 4">
+              </a>
+            </div>
+          </div>
+          <!-- Carousel Navigation Buttons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News Section -->
+<section id="school-news">
+  <div class="container">
+
+    <!-- News Title -->
+    <h2 class="news-title">News</h2>
+    <hr> <!-- Horizontal line -->
+
+    <!-- Main Featured News -->
+    <div class="featured-news">
+      <div class="featured-image">
+        <a href="news-main-image.jpg" target="_blank">
+          <img src="news-main-image.jpg" alt="Featured News" class="news-image">
+        </a>
+        <!-- Additional Text Below Image -->
+        <div class="image-caption">
+          <p><strong>Litrato kuha ni: Jamilla Lindo</strong></p>
+        </div>
+      </div>
+      <div class="featured-text">
+        <h2><a href="news1.html" style="text-decoration: none; color: black;">
+          Mayor Arman Dimaguila, inilatag ang mga nakalaang plano para sa BCSHS - West Campus sa kaniyang muling pagbisita
+      </a></h2>
+        <p>Muling bumisita sa BCSHS - West Campus si Mayor Arman Dimaguila, kasama sina Vice Mayor Gel Alonte, Dr. Edmil Recibe, at iba pang mga...</p>
+        <p class="news-source">ANG SALIGAN | THE WESTERN POST</p>
+        <p class="news-date">August 7, 2024</p>
+      </div>
+    </div>
+
+<!-- Other News Articles -->
+<div class="other-news">
+  <div class="news-item">
+    <div class="news-image-container">
+      <div class="placeholder-box">
+        <span></span>
+      </div>
+        <!-- Caption Below Image -->
+        <p class="image-caption"><strong>Litrato kuha ni: Jamilla Lindo</strong></p>
+    </div>
+    <div class="news-text">
+      <h3><a href="news2.html" style="color: black; text-decoration: none;">Kauna-unahang Welcoming Ceremony, handog ng BCSHS - West Campus para sa mga bagong mag-aaral</a></h3>
+      <p>Binigyan ng mainit na pagtanggap ng Biñan City Senior High School - West Campus, sa pamamahala ng...</p>
+      <p style="color: #0d41a6;">ANG SALIGAN | THE WESTERN POST</p>
+      <p style="margin-top: -20px;">August 3, 2024</p>
+    </div>
+  </div>
+
+  <!-- News with Placeholder Image -->
+  <div class="news-item">
+    <div class="news-image-container">
+      <div class="placeholder-box2">
+        <span>No Image Available</span>
+      </div>
+      <!-- Caption Below Image -->
+      <p class="image-caption"><strong>Litrato kuha ni: Jamilla Lindo</strong></p>
+    </div>
+    <div class="news-text">
+      <h3>Headline</h3>
+      <p>Lead</p>
+      <p style="color: #0d41a6;">ANG SALIGAN | THE WESTERN POST</p>
+      <p  style="margin-top: -20px;">August 3, 2024</p>
+    </div>
+
+  </div>
+</div>
+<br><br><br>
+<a href="main_news.html" class="btn btn-primary" style="width: 15%;">See More</a>
+  </div>
+</section>
+
+
+
+
+<!-- Research Section -->
+<section id="research-section">
+  <div class="container fade-in">
+    <!-- Main Research Content -->
+    <div class="research-content">
+      <!-- Research Images (70% width) -->
+      <div class="research-images">
+        <div class="research-image">
+          <img src="quantitative.png" alt="Research Image 1" class="research-img">
+          <div class="research-title-inside">
+            <a href="quantitative.html" class="title-link">
+              <div class="title-line">Quantitative</div>
+              <div class="subtitle-line">Research</div>
+            </a>
+          </div>
+        </div>
+        <div class="research-image">
+          <img src="qualitative.png" alt="Research Image 2" class="research-img">
+          <div class="research-title-inside">
+            <a href="qualitative.html" class="title-link">
+              <div class="title-line">Qualitative</div>
+              <div class="subtitle-line">Research</div>
+            </a>
+          </div>
+        </div>
+        <div class="research-image">
+          <img src="investigatory.png" alt="Research Image 3" class="research-img">
+          <div class="research-title-inside">
+            <a href="investigatory.html" class="title-link">
+              <div class="title-line">Science Investigatory</div>
+              <div class="subtitle-line">Project</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Content (30% width) -->
+      <div class="research-text">
+        <h3>Research</h3>
+        <hr style="width: 100%; border: 0; border-top: 3px solid #0d41a6; margin-top: -10px;">
+        <p>This section showcases various studies conducted by students, highlighting their exploration of real-world issues and innovative solutions. It includes projects that promote critical thinking, creativity, and problem-solving skills. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="school-events">
+  <div class="container fade-in">
+
+    <!-- Events Title -->
+    <h2 class="events-title">Events</h2>
+    <hr> <!-- Horizontal line -->
+
+    <!-- Other Events -->
+    <div class="other-events">
+      <div class="event-item">
+        <div class="event-image-container">
+          <div class="placeholder-boxes">
+            <p class="month">April</p>
+            <p class="day">10</p>
+          </div>
+        </div>
+        <div class="event-text">
+          <h3><a href="events.html" class="event-link">Announcing the Graduation Ball of the Grade 12 Class of 2025: Hollywood Extravaganza</a></h3>
+          <p>Get ready for an exciting week of sports, competitions, and fun activities...We are thrilled to invite you to a night of glitz, glamour, and unforgettable memories as we celebrate the culmination of and...</p>
+          <p>Posted: March 15, 2025</p>
+        </div>
+      </div>
+
+          
+      <!-- Another Event -->
+      <div class="event-item">
+        <div class="event-image-container">
+          <div class="placeholder-boxes">
+            <p class="month">November</p>
+            <p class="day">5</p>
+          </div>
+        </div>
+        <div class="event-text">
+          <h3><a href="/events/science-exhibit" class="event-link"></a></h3>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <a href="all-events.html" class="btn btn-primary" style="width: 15%;">See More</a>
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer style="background-image: url('footer.png'); background-size: cover; background-position: center; color: white; padding: 40px 0;">
+  <div class="container text-center fade-in">
+    <div class="row">
+      <!-- Keep in Touch Section -->
+      <div class="col-12 col-md-6">
+        <h5>Keep in Touch</h5>
+        <p>
+          <a href="https://www.facebook.com/profile.php?id=61555613022581&rdid=lcok5WhIii6YrHSX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15oUtdJxnh%2F#" 
+             class="text-white" target="_blank" rel="noopener noreferrer">
+            Biñan City Senior High School - West Campus Office of Registrar
+          </a>
+          <br>
+          <a href="https://www.facebook.com/profile.php?id=61550726895654&rdid=ZiLWIlMAc8mBsdlN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1MxLypArBB%2F#" 
+             class="text-white" target="_blank" rel="noopener noreferrer">
+            DepEd Tayo Biñan City Senior High School - West Campus
+          </a>
+        </p>
+        
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-12 col-md-6">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i> Biñan City, Laguna, Philippines</p>
+        <p><i class="fas fa-phone-alt"></i> +63 968 492 9863</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:bcshswc.registrarsoffice@gmail.com" class="text-white">bcshswc.registrarsoffice@gmail.com</a></p>
+      </div>
+    </div>
+
+    <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.5);">
+
+    <div class="row">
+      <div class="col-12">
+        <p>&copy; 2025 Biñan City Senior High School - West Campus. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Include the Bootstrap 5.0.2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="scripts.js"></script>
+</body>
+</html>

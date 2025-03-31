@@ -1,0 +1,1482 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+body, html {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Smooth fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+ NAVBAR STYLES
+============================== */
+/* Navbar */
+.navbar {
+  z-index: 1050;
+}
+
+#navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#navbar a.nav-link {
+  color: white;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+#brandName {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: -10px;
+  color: white;
+}
+
+/* Navbar when scrolled */
+#navbar.scrolled {
+  background-color: white !important;
+}
+
+#navbar.scrolled a.nav-link,
+#navbar.scrolled .brand-text {
+  color: black !important;
+}
+
+/* Responsive Navbar */
+/* Responsive Navbar */
+@media (max-width: 992px) {
+  #navbar {
+      background-color: white !important;
+  }
+
+  #navbar a.nav-link,
+  .brand-text {
+      color: black !important;
+      font-size: 1rem !important;  /* Corrected */
+  }
+
+  #navbar .navbar-toggler {
+      border-color: black;
+  }
+}
+
+
+     /* ==============================
+   MAIN SECTION (CAROUSEL)
+============================== */
+#main-section {
+  z-index: 1;
+  position: relative;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+/* Carousel Image */
+.carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Carousel Caption (Now Positioned Independently) */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
+  text-align: left;
+  width: 80%;
+  z-index: 2;
+}
+
+/* Typography */
+.carousel-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.carousel-subtitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-top: -40px;
+}
+
+.carousel-description {
+  font-size: 1.25rem;
+  font-weight: normal;
+  margin-top: -20px;
+  margin-left: 100px;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 2rem;
+    padding-bottom: 8px;
+  }
+
+  .carousel-subtitle {
+    font-size: 2.5rem;
+    padding-bottom: 8px;
+  }
+
+  .carousel-description {
+    font-size: 1rem;
+    margin-left: 30px;
+    padding-bottom: 8px;
+  }
+
+  .carousel-caption {
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-title,
+  .carousel-subtitle {
+    font-size: 2rem;
+  }
+
+  .carousel-description {
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+}
+
+
+
+/* ========================================= */
+/*              ABOUT SECTION                */
+/* ========================================= */
+
+/* General styling for the About Section */
+#about-section {
+  background-color: white; /* Set background color */
+  padding: 60px 0; /* Add padding for spacing */
+  text-align: center; /* Center align content */
+}
+
+/* About Section Title */
+#about-section h2 {
+  font-size: 2.5rem; /* Large font size */
+  font-weight: bold; /* Make text bold */
+  color: #333; /* Dark gray color */
+  margin-bottom: 20px; /* Add space below the title */
+}
+
+/* About Section Paragraph */
+#about-section p {
+  font-size: 1.25rem; /* Medium font size */
+  color: #555; /* Slightly lighter gray */
+  margin-bottom: 15px; /* Space below each paragraph */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* About Section Icon */
+#about-section .icon {
+  font-size: 4rem; /* Large icon */
+  color: #007bff; /* Blue color */
+  margin-bottom: 15px; /* Add space below icon */
+}
+
+/* ========================================= */
+/*           RESPONSIVE DESIGN               */
+/* ========================================= */
+
+/* Medium Screens (Tablets and small desktops) */
+@media (max-width: 768px) {
+  #about-section h2 {
+      font-size: 2rem; /* Reduce title size */
+  }
+
+  #about-section p {
+      font-size: 1rem; /* Reduce paragraph size */
+  }
+
+  #about-section .icon {
+      font-size: 3rem; /* Reduce icon size */
+  }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 576px) {
+  #about-section h2 {
+      font-size: 1.5rem; /* Even smaller title */
+  }
+
+  #about-section p {
+      font-size: 0.9rem; /* Smaller paragraph text */
+  }
+
+  #about-section .icon {
+      font-size: 2.5rem; /* Reduce icon size further */
+  }
+}
+
+/* ========================================= */
+/*     CONTAINER STYLING FOR ABOUT SECTION   */
+/* ========================================= */
+
+.container {
+  max-width: 1000px; /* Limit width for better readability */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;  /* Add left padding */
+  padding-right: 20px; /* Add right padding */
+}
+
+
+
+/* ========================================= */
+/*            ANNOUNCEMENT SECTION           */
+/* ========================================= */
+
+/* Section Background and Spacing */
+#announcement-section {
+  background-color: #f4f4f4;  /* Light gray background */
+  padding: 40px 0;  /* Vertical padding */
+}
+
+/* Container Styling */
+#announcement-section .container {
+  max-width: 1200px;  /* Set the max width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ========================================= */
+/*        ANNOUNCEMENT HEADER STYLES         */
+/* ========================================= */
+
+/* Header Layout */
+.announcement-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  /* Align left by default */
+  margin-bottom: 20px;
+}
+
+/* Announcement Title */
+.announcement-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0d41a6;  /* Deep blue color */
+  margin-right: 20px;
+}
+
+/* Horizontal Line Under Title */
+.announcement-hr {
+  width: 100%;
+  border: 2px solid #0d41a6; /* Match title color */
+  margin: 0;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+/* ========================================= */
+/*        MAIN ANNOUNCEMENT CONTENT          */
+/* ========================================= */
+
+/* Major Content Section (70% width) */
+.major-content {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+/* Announcement Title Link */
+.announcement-text {
+  font-size: 2rem;
+  color: #0d41a6;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+
+/* Clickable Graduation Link */
+.graduation-link {
+  color: #0d41a6;
+  text-decoration: underline;
+}
+
+/* Posted Date Styling */
+.announcement-text.posted-date {
+  font-style: italic;  /* Makes the text italic */
+  font-size: 1.5rem;
+  margin-top: -20px;
+}
+
+/* Announcement Description */
+.announcement-text.graduation-description {
+  margin-top: 20px;
+  color: #555;  /* Lighter gray */
+  font-size: 1.5rem;
+}
+
+/* ========================================= */
+/*           ANNOUNCEMENT SUBMENU            */
+/* ========================================= */
+
+/* Sub Menu Section (30% width) */
+.sub-menu {
+  width: 30%;
+  padding-left: 20px;
+}
+
+/* Sub Menu List Styling */
+.sub-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Sub Menu List Items */
+.sub-menu ul li {
+  margin-bottom: 10px;
+}
+
+/* Sub Menu Links */
+.sub-menu ul li a {
+  font-size: 1.3rem;
+  color: #0d41a6;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Sub Menu Links Hover Effect */
+.sub-menu ul li a:hover {
+  color: #0056b3;  /* Darker blue */
+}
+
+/* Sub Menu Description */
+.sub-menu-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* ========================================= */
+/*               BUTTON STYLING              */
+/* ========================================= */
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 50%;
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* ========================================= */
+/*         RESPONSIVE DESIGN (TABLET)        */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  /* Center the header */
+  .announcement-header {
+      justify-content: center;
+  }
+
+  /* Reduce header font size */
+  .announcement-header h2 {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  /* Full width for major content */
+  .major-content {
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Reduce text size */
+  .announcement-text {
+      font-size: 1.5rem;
+      text-align: center;
+  }
+
+  /* Reduce description text size */
+  .announcement-text.graduation-description {
+      font-size: 1.3rem;
+      text-align: center;
+  }
+
+  /* Full width for sub-menu */
+  .sub-menu {
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Adjust description font size */
+  .sub-menu-description {
+      font-size: 1rem;
+      text-align: center;
+  }
+
+  /* Full width button */
+  .btn-primary {
+      width: 80%;
+      margin-top: 20px;
+  }
+}
+
+/* ========================================= */
+/*          RESPONSIVE DESIGN (MOBILE)       */
+/* ========================================= */
+
+@media (max-width: 576px) {
+
+  .btn-primary {
+    width: 30% !important;
+    margin-top: 20px;
+}
+  /* Even smaller header */
+  .announcement-header h2 {
+      font-size: 1.8rem;
+      text-align: center;
+  }
+
+  /* Reduce main text size */
+  .announcement-text {
+      font-size: 1.2rem;
+      text-align: center;
+  }
+
+  /* Sub-menu title */
+  .sub-menu h5 {
+      font-size: 1.2rem;
+  }
+
+  /* Reduce link size */
+  .sub-menu ul li a {
+      font-size: 1rem;
+  }
+
+  /* Smaller description text */
+  .sub-menu-description {
+      font-size: 0.9rem;
+  }
+}
+
+
+
+#gallery-section {
+  background-color: #fff;  /* White background for the section */
+  padding: 40px 0;  /* Vertical padding */
+}
+
+#gallery-section .container {
+  max-width: 1200px;  /* Set the max width */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 20px;  /* Space between images */
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 250px;  /* Limit the size of images */
+  height: 500px;  /* Set a fixed taller height for images */
+  object-fit: cover;  /* Ensure the image covers the container while maintaining its aspect ratio */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for images */
+  transform: rotate(10deg);  /* Apply a static tilt effect in the opposite direction */
+  transition: transform 0.3s ease;
+}
+
+
+.gallery-hr {
+  width: 100%;  /* Set the width of the line */
+  border: 0;
+  border-top: 3px solid #0d41a6;  /* Set the color of the line */
+  margin: 10px auto;  /* Center the line */
+  margin-top: -10px;
+}
+
+.text-content {
+  padding-left: 30px;  /* Create space between images and text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center the content */
+  align-items: center;  /* Horizontally center the content */
+  width: 30%;  /* Set the width to 30% of the parent container */
+  text-align: center;  /* Center text within the content area */
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  color: #0d41a6;
+  margin-bottom: 15px;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;  /* Adds space between paragraph and button */
+  align-self: start;  /* Center the button horizontally */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  #gallery-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-images {
+    flex-direction: column;
+    gap: 15px;  /* Space between images on smaller screens */
+  }
+
+  .gallery-image {
+    max-width: 100%;
+    height: 400px;  /* Adjust height on smaller screens */
+    transform: rotate(0deg);  /* Remove tilt effect on smaller screens */
+  }
+
+  .text-content {
+    padding-left: 0;
+    padding-top: 20px;
+    width: 100%;  /* Make the text take full width on smaller screens */
+    text-align: center;  /* Center text on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-content h2 {
+    font-size: 1.5rem;  /* Smaller title on mobile */
+  }
+
+  .text-content p {
+    font-size: 1rem;  /* Smaller text on mobile */
+  }
+}
+
+
+
+/* ========================================= */
+/*       ACADEMIC STRANDS SECTION            */
+/* ========================================= */
+
+#academic-strands-section {
+  background-color: #fff;  /* White background */
+  padding: 40px 0;  /* Vertical padding */
+}
+
+#academic-strands-section .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Layout: Flexbox for Images and Text */
+.academic-strands {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Image Gallery Section */
+.academic-strands-images {
+  display: flex;
+  gap: 20px;  /* Space between images */
+}
+
+/* Academic Strand Images */
+.academic-strands-image {
+  width: 100%;
+  max-width: 250px;  /* Limit size */
+  height: 500px;  /* Set taller height */
+  object-fit: cover;  /* Maintain aspect ratio */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow */
+  transform: rotate(10deg);  /* Apply tilt effect */
+  transition: transform 0.3s ease;
+}
+
+/* Horizontal Line Under Title */
+.academic-strands-hr {
+  width: 100%;
+  border: 0;
+  border-top: 3px solid #0d41a6; /* Matching theme color */
+  margin: 10px auto;
+  margin-top: -10px;
+}
+
+/* Text Content Section */
+.text-content {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical alignment */
+  align-items: center;  /* Center content */
+  width: 30%;
+  text-align: center;
+}
+
+/* Title */
+.text-content h2 {
+  font-size: 2rem;
+  color: #0d41a6;
+  margin-bottom: 15px;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+/* Paragraph */
+.text-content p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px; /* Space between text and button */
+  width: 50%;
+  align-self: start;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* ========================================= */
+/*         RESPONSIVE DESIGN (TABLET)        */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  #academic-strands-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .academic-strands {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .academic-strands-images {
+    flex-direction: column;
+    gap: 15px; /* Space between images on smaller screens */
+  }
+
+  .academic-strands-image {
+    max-width: 100%;
+    height: 400px; /* Adjust height */
+    transform: rotate(0deg); /* Remove tilt effect on smaller screens */
+  }
+
+  .text-content {
+    padding-left: 0;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ========================================= */
+/*          RESPONSIVE DESIGN (MOBILE)       */
+/* ========================================= */
+
+@media (max-width: 576px) {
+  .text-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 992px) {  /* Applies for medium screens and below */
+  .btn-primary {
+    width: 100%;  /* Adjust width for medium screens */
+    display: block;  /* Make it a block element */
+    margin: 20px auto;  /* Center the button */
+    text-align: center;  /* Ensure text alignment */
+  }
+}
+
+@media (max-width: 768px) {  /* Applies for tablets and below */
+  .btn-primary {
+    width: 100%;  /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {  /* Applies for mobile screens */
+  .btn-primary {
+    width: 100%;  /* Make the button wider on smaller screens */
+  }
+}
+
+
+/* ===== SCHOOL GALLERY SECTION ===== */
+#school-gallery {
+  background-color: #f4f4f4;  
+  padding: 60px 0;  
+}
+
+/* ===== CONTAINER ===== */
+#school-gallery .container {
+  max-width: 1200px;  
+  margin: 0 auto;  
+  padding: 0 20px;  
+}
+
+/* ===== LAYOUT: FLEXBOX FOR SIDE-BY-SIDE CONTENT ===== */
+.gallery-content {
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  flex-wrap: wrap;  
+}
+
+/* ===== TEXT CONTENT (LEFT SIDE) ===== */
+.text-content {
+  width: 50%;  
+  padding-right: 20px;  
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text Header */
+.text-content h2 {
+  font-size: 2.5rem;  
+  color: #0d41a6;  
+  margin-bottom: 10px;  
+}
+
+/* Horizontal Line */
+.text-content hr {
+  width: 100%;  
+  border: 0;
+  border-top: 3px solid #0d41a6;  
+  margin: 10px auto;  
+  margin-top: -10px;
+}
+
+/* Paragraph */
+.text-content p {
+  font-size: 1.1rem;  
+  color: #555;  
+  line-height: 1.6;  
+  margin-top: 20px;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: auto; /* Push button to bottom */
+  width: 40%;
+  align-self: end;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* ===== IMAGE CONTENT (RIGHT SIDE) ===== */
+.image-content {
+  width: 50%;  
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+}
+
+/* Image Styling (No Tilt) */
+.gallery-image {
+  width: 100%;  
+  max-width: 600px;  
+  height: 350px;  /* Set height for consistency */
+  object-fit: cover;  
+  border-radius: 15px;  
+  transform: none !important; /* Ensure no tilt */
+  rotate: none !important;
+  transition: transform 0.3s ease;
+}
+
+/* Clickable Image Hover Effect */
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Carousel Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+/* ===== RESPONSIVE DESIGN FOR SMALLER SCREENS ===== */
+@media (max-width: 768px) {
+  .gallery-content {
+    flex-direction: column;  
+    text-align: center;  
+  }
+
+  .text-content,
+  .image-content {
+    width: 100%;  
+    padding: 10px 0;  
+  }
+
+  .gallery-image {
+    max-width: 100%;  
+    height: 250px;  /* Adjust height for smaller screens */
+  }
+
+  .btn-primary {
+    width: 40% !important;
+    margin-top: 20px;
+}
+}
+
+
+
+
+
+/* ===== SCHOOL NEWS SECTION ===== */
+#school-news {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+/* ===== CONTAINER ===== */
+#school-news .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== NEWS TITLE ===== */
+.news-title {
+  font-size: 2.5rem;
+  color: #0d41a6;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Horizontal Line */
+#school-news hr {
+  width: 100%;
+  border: 0;
+  border-top: 3px solid #0d41a6;
+  margin: 10px 0 40px;
+}
+
+/* ===== FEATURED NEWS (MAIN CONTENT) ===== */
+.featured-news {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Featured Image - 60% Width */
+.featured-image {
+  width: 60%;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Text Below Image */
+.image-caption {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.image-caption p {
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+  font-style: italic;
+}
+
+.news-source {
+  color: #0d41a6 !important;
+  font-weight: bold;
+}
+
+.news-date {
+  color: #777;
+  margin-top: -30px;
+}
+
+/* Featured Text - 40% Width */
+.featured-text {
+  width: 40%;
+  padding-left: 20px;
+}
+
+.featured-text h2 {
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.featured-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Read More Button */
+.featured-text .btn-primary {
+  width: fit-content;
+}
+
+/* ===== OTHER NEWS ARTICLES ===== */
+.other-news {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* News Item Layout */
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Image - 30% Width */
+.news-image-container {
+  width: 30%;
+}
+
+.news-thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Placeholder Image Box */
+.placeholder-box {
+  width: 100%;
+  height: 200px;  /* Increased height for a larger placeholder */
+  background-image: url('news2.jpg');  /* Set actual image as the background */
+  background-position: center;  /* Center the image */
+  background-size: cover;  /* Ensure the image covers the entire box */
+  background-repeat: no-repeat;  /* Prevent image repetition */
+  border-radius: 15px;  /* Rounded corners for a smoother look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 1.2rem;  /* Slightly larger font for better visibility */
+  font-weight: bold;
+  text-align: center;  /* Ensure text is centered within the box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+}
+
+/* Text - 70% Width */
+.news-text {
+  width: 70%;
+}
+
+.news-text h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.news-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.image-caption {
+  font-size: 0.8rem;
+  color: black;
+  text-align: start;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .featured-news {
+    flex-direction: column;
+  }
+
+  .featured-image, .featured-text {
+    width: 100%;
+  }
+
+  .featured-text {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .image-caption {
+    text-align: center;
+  }
+
+  .news-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .news-image-container {
+    width: 100%;
+  }
+
+  .news-text {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* ===== EVENTS SECTION ===== */
+#school-events {
+  background-color: white;  
+  padding: 60px 0;
+}
+
+/* ===== CONTAINER ===== */
+#school-events .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== EVENTS TITLE ===== */
+.events-title {
+  font-size: 2.5rem;
+  color: #0d41a6;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Horizontal Line */
+#school-events hr {
+  width: 100%;
+  border: 0;
+  border-top: 3px solid #0d41a6;
+  margin: 10px 0 40px;
+}
+
+/* ===== FEATURED EVENT (MAIN CONTENT) ===== */
+.featured-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Event Image - 60% Width */
+.event-image {
+  width: 60%;
+  position: relative;
+}
+
+.event-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Text Below Image */
+.image-caption {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.image-caption p {
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+  font-style: italic;
+}
+
+.event-source {
+  color: #0d41a6 !important;
+  font-weight: bold;
+}
+
+.event-date {
+  color: #777;
+  margin-top: -30px;
+}
+
+/* Featured Text - 40% Width */
+.event-text {
+  width: 40%;
+  padding-left: 20px;
+}
+
+.event-text h2 {
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.event-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Read More Button */
+.event-text .btn-primary {
+  width: fit-content;
+}
+
+/* ===== OTHER EVENTS ===== */
+.other-events {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Event Item Layout */
+.event-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px; /* Add spacing between event items */
+}
+
+/* Placeholder Box for Event Date */
+.event-image-container {
+  width: 30%; /* 30% for placeholder box */
+}
+/* General Placeholder Box */
+.placeholder-boxes {
+  width: 100%; /* Both will have 100% width */
+  height: 200px; /* Fixed height for both */
+  background-color: #0d41a6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Text inside the Placeholder Box */
+.placeholder-boxes .month {
+  font-size: 1.2rem; /* Smaller size for the month */
+  margin: 0;
+  font-weight: normal;
+}
+
+.placeholder-boxes .day {
+  font-size: 3rem; /* Larger size for the day number */
+  margin: 0;
+  font-weight: bold;
+}
+
+
+/* Event Text - 70% Width */
+.event-text {
+  width: 70%; /* 70% for event text */
+}
+
+.event-text h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.event-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.event-text .event-link {
+  color: #0d41a6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .featured-event {
+    flex-direction: column;
+  }
+
+  .event-image, .event-text {
+    width: 100%;
+  }
+
+  .event-text {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .image-caption {
+    text-align: center;
+  }
+
+  .event-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .event-image-container {
+    width: 100%;
+  }
+
+  .event-text {
+    width: 100%;
+  }
+}
+
+/* ===== RESEARCH SECTION ===== */
+#research-section {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+
+}
+
+/* ===== CONTAINER ===== */
+#research-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== RESEARCH TITLE ===== */
+.research-content h3 {
+  font-size: 2.5rem;
+  color: #0d41a6;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Horizontal Line */
+#research-section hr {
+  width: 100%;
+  border: 0;
+  border-top: 3px solid #0d41a6;
+  margin: 10px 0 40px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.research-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Research Images - 70% Width */
+.research-images {
+  width: 70%;
+  display: flex;
+  gap: 20px;
+}
+
+.research-image {
+  position: relative;
+  width: 100%;
+}
+
+.research-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Research Image Title Inside */
+.research-title-inside {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.title-link {
+  color: white; /* Ensure link text color is white */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.title-line {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle-line {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* Text Content - 30% Width */
+.research-text {
+  width: 30%;
+  padding-left: 20px;
+}
+
+.research-text h3 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.research-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .research-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .research-images {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .research-text {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .research-img {
+    height: 200px; /* Adjust image height for smaller screens */
+  }
+
+  .research-title-inside {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .research-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .research-text p {
+    font-size: 1rem;
+  }
+}

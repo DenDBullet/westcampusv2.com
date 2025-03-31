@@ -1,0 +1,165 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Smooth fade-in effect */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ==============================
+   NAVBAR STYLES
+  ============================== */
+  /* Navbar */
+  .navbar {
+    z-index: 1050;
+  }
+  
+  #navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #navbar a.nav-link {
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  #brandName {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .brand-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: -10px;
+    color: white;
+  }
+  
+  /* Navbar when scrolled */
+  #navbar.scrolled {
+    background-color: white !important;
+  }
+  
+  #navbar.scrolled a.nav-link,
+  #navbar.scrolled .brand-text {
+    color: black !important;
+  }
+  
+  /* Responsive Navbar */
+  /* Responsive Navbar */
+  @media (max-width: 992px) {
+    #navbar {
+        background-color: white !important;
+    }
+  
+    #navbar a.nav-link,
+    .brand-text {
+        color: black !important;
+        font-size: 1rem !important;  /* Corrected */
+    }
+  
+    #navbar .navbar-toggler {
+        border-color: black;
+    }
+  }
+  
+  /* ==============================
+     ANNOUNCEMENT US SECTION (UPDATED)
+  ============================== */
+
+  #qualitative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    min-height: 100vh; /* Ensure full viewport height */
+  }
+  
+  /* Top part with the background image */
+  .qualitative-image {
+    background: url('carousel1.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 40vh; /* Use min-height for flexibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* "ANNOUNCEMENT" text styling */
+  .qualitative-image p {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
+  }
+  
+  .qualitative-content {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center;
+    padding: 30px;
+    min-height: 60vh;
+    box-sizing: border-box;
+    text-align: justify;
+  }
+  
+  .qualitative-content h3,
+  .qualitative-content h4 {
+    text-align: left; /* Keep headings left-aligned */
+    margin-top: 0px;
+  }
+  
+ 
+/* Responsive font sizes */
+@media (max-width: 1024px) {
+    .qualitative-image p { font-size: 4rem; }
+}
+@media (max-width: 768px) {
+    .qualitative-image p { font-size: 3rem; }
+}
+@media (max-width: 480px) {
+    .qualitative-image p { font-size: 2rem; }
+}
+
+/* Content Section */
+.qualitative-content {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: justify;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Page</title>
+    <!-- Include the Bootstrap 5.0.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Link to Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="about.css">
+</head>
+<style>
+    #about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Top part with the background image (adjust to flex more responsively) */
+.about-image {
+    background: url('carousel1.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 40vh; /* Use min-height for flexibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* "ABOUT" text styling (center the text horizontally and vertically) */
+.about-image p {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+}
+
+/* Bottom part with a white background (60% of the section) */
+.about-content {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Ensure content starts from the top */
+    padding: 30px;
+    min-height: 60vh; /* Adjust for smaller screens */
+    box-sizing: border-box;
+}
+
+
+/* Paragraph styling for general content */
+.about-content p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left; /* Left align the paragraph */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Adjust the background image for smaller screens */
+    .about-image p {
+        font-size: 3rem;
+        left: 50%; /* Move to center */
+        transform: translateX(-50%);
+    }
+
+    /* Adjust title and text for smaller screens */
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    /* Make text inside about-content more mobile-friendly */
+    .about-content {
+        padding: 20px; /* Reduce padding */
+    }
+}
+
+</style>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top" id="navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+      <!-- Logo and Brand Name -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="index.html" id="brandName">
+          <img src="logo.png" alt="Logo" width="100" height="50" class="me-2">
+          <span class="brand-text">WEST CAMPUS</span>
+        </a>
+      </div>
+  
+      <!-- Navbar Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html"><i class="fas fa-home"></i> HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarAboutDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-info-circle"></i> ABOUT
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="home_of_excellence.html">The Home of Excellence</a></li>
+              <li><a class="dropdown-item" href="awards_recognition.html">Awards & Recognition</a></li>
+              <li><a class="dropdown-item" href="westernet.html">Westernet</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="awards_recognition.html"><i class="fas fa-bullhorn"></i> ANNOUNCEMENT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="main_news.html"><i class="fas fa-newspaper"></i> NEWS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-book"></i> RESEARCH
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="qualitative.html">Qualitative Research</a></li>
+              <li><a class="dropdown-item" href="quantitative.html">Quantitative Research</a></li>
+              <li><a class="dropdown-item" href="investigatory.html">Science Investigatory Project</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="all-events.html"><i class="fas fa-calendar-alt"></i> EVENTS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about-us">
+    <div class="about-image">
+        <p>ABOUT</p>
+    </div>
+    <div class="about-content fade-in">
+        <p style="font-size: 1.5rem;"><strong style="font-size: 2.5rem; color: #0d41a6;">WESTERNET</strong> the official website of Biñan City Senior High School - West Campus, is a platform that provides students, parents, teachers, and the community with easy access to important information and updates about the school. </p>
+    
+        <p style="font-style: italic;">The website offers a variety of content and features, including:</p>
+
+        <p><strong>School News:</strong> Stay updated on the latest school activities, events, and important announcements.</p>
+        
+        <p><strong>Announcements:</strong>  Find essential school notices such as exam schedules, holidays, and other important dates.</p>
+
+        <p><strong>Awards and Recognitions:</strong> Learn about the achievements of students and faculty in academics, sports, journalism, arts, and other fields.</p>
+
+        <p><strong>Events and Activities</strong>  Discover upcoming events and opportunities for student involvement in school programs.</p>
+
+        <p><strong>Research: </strong> View research projects and academic studies created by students and faculty.</p>
+
+        <p><strong>Contact Information: </strong> Easily reach out to teachers, administrators, and staff for any assistance.</p>
+
+        <p>The website also features a <strong>School Gallery,</strong> where visitors can view images of the school’s modern facilities, including classrooms, laboratories, and other amenities. This gallery highlights the school's commitment to providing a safe, inspiring, and well-equipped learning environment. </p>
+    </div>
+</section>
+
+
+
+
+
+<!-- Footer Section -->
+<footer style="background-image: url('footer.png'); background-size: cover; background-position: center; color: white; padding: 40px 0;">
+  <div class="container text-center fade-in">
+    <div class="row">
+      <!-- Keep in Touch Section -->
+      <div class="col-12 col-md-6">
+        <h5>Keep in Touch</h5>
+        <p>
+          <a href="https://www.facebook.com/profile.php?id=61555613022581&rdid=lcok5WhIii6YrHSX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15oUtdJxnh%2F#" 
+             class="text-white" target="_blank" rel="noopener noreferrer">
+            Biñan City Senior High School - West Campus Office of Registrar
+          </a>
+          <br><br>
+          <a href="https://www.facebook.com/profile.php?id=61550726895654&rdid=ZiLWIlMAc8mBsdlN&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1MxLypArBB%2F#" 
+             class="text-white" target="_blank" rel="noopener noreferrer">
+            DepEd Tayo Biñan City Senior High School - West Campus
+          </a>
+        </p>        
+      </div>
+
+      <!-- Contact Us Section -->
+      <div class="col-12 col-md-6">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i> Biñan City, Laguna, Philippines</p>
+        <p><i class="fas fa-phone-alt"></i> +63 968 492 9863</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:bcshswc.registrarsoffice@gmail.com" class="text-white">bcshswc.registrarsoffice@gmail.com</a></p>
+      </div>
+    </div>
+
+    <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.5);">
+
+    <div class="row">
+      <div class="col-12">
+        <p>&copy; 2025 Biñan City Senior High School - West Campus. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<!-- Include the Bootstrap 5.0.2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="scripts.js"></script>
+</body>
+</html>

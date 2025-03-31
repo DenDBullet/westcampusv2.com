@@ -1,0 +1,218 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Smooth fade-in effect */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ==============================
+   NAVBAR STYLES
+  ============================== */
+  /* Navbar */
+  .navbar {
+    z-index: 1050;
+  }
+  
+  #navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #navbar a.nav-link {
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  #brandName {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .brand-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: -10px;
+    color: white;
+  }
+  
+  /* Navbar when scrolled */
+  #navbar.scrolled {
+    background-color: white !important;
+  }
+  
+  #navbar.scrolled a.nav-link,
+  #navbar.scrolled .brand-text {
+    color: black !important;
+  }
+  
+  /* Responsive Navbar */
+  /* Responsive Navbar */
+  @media (max-width: 992px) {
+    #navbar {
+        background-color: white !important;
+    }
+  
+    #navbar a.nav-link,
+    .brand-text {
+        color: black !important;
+        font-size: 1rem !important;  /* Corrected */
+    }
+  
+    #navbar .navbar-toggler {
+        border-color: black;
+    }
+  }
+  
+  /* ==============================
+     Qualitative SECTION (UPDATED)
+  ============================== */
+  #qualitative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    min-height: 100vh;
+}
+
+/* Background Image Section */
+.qualitative-image {
+    background: url('carousel1.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Responsive Title Text */
+.qualitative-image p {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
+}
+
+/* Responsive font sizes */
+@media (max-width: 1024px) {
+    .qualitative-image p { font-size: 4rem; }
+}
+@media (max-width: 768px) {
+    .qualitative-image p { font-size: 3rem; }
+}
+@media (max-width: 480px) {
+    .qualitative-image p { font-size: 2rem; }
+}
+
+/* Content Section */
+.qualitative-content {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+/* Description text */
+.description {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Image Row */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Image Container */
+.image-container {
+    width: 48%;
+    text-align: center;
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Image Caption */
+.image-caption {
+    font-size: 1.3rem;
+    color: black;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+/* Placeholder Styling (for missing image) */
+.placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    height: 250px; /* Adjust as needed */
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.placeholder img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container {
+        width: 100%;
+    }
+}

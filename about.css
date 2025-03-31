@@ -1,0 +1,209 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Smooth fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+   NAVBAR STYLES
+============================== */
+/* Navbar */
+.navbar {
+    z-index: 1050;
+  }
+  
+  #navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #navbar a.nav-link {
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  #brandName {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .brand-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: -10px;
+    color: white;
+  }
+  
+  /* Navbar when scrolled */
+  #navbar.scrolled {
+    background-color: white !important;
+  }
+  
+  #navbar.scrolled a.nav-link,
+  #navbar.scrolled .brand-text {
+    color: black !important;
+  }
+  
+  /* Responsive Navbar */
+ /* Responsive Navbar */
+@media (max-width: 992px) {
+    #navbar {
+        background-color: white !important;
+    }
+
+    #navbar a.nav-link,
+    .brand-text {
+        color: black !important;
+        font-size: 1rem !important;  /* Corrected */
+    }
+
+    #navbar .navbar-toggler {
+        border-color: black;
+    }
+}
+
+
+/* ==============================
+   ABOUT US SECTION (UPDATED)
+============================== */
+/* ==============================
+   ABOUT US SECTION (UPDATED)
+============================== */
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Top part with the background image (adjust to flex more responsively) */
+.about-image {
+    background: url('carousel1.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 40vh; /* Use min-height for flexibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* "ABOUT" text styling (center the text horizontally and vertically) */
+.about-image p {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    text-shadow: 5px 5px 20px rgba(0, 0, 0, 2);
+}
+
+/* Bottom part with a white background (60% of the section) */
+.about-content {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 60vh; /* Adjust for smaller screens */
+    box-sizing: border-box;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.about-content p {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center; /* Center text on smaller screens */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Adjust the background image for smaller screens */
+    
+    .about-image p {
+        font-size: 3rem;
+        left: 50%; /* Move to center */
+        transform: translateX(-50%);
+    }
+
+    /* Adjust title and text for smaller screens */
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    /* Make text inside about-content more mobile-friendly */
+    .about-content {
+        padding: 20px; /* Reduce padding */
+    }
+}
+
+
+.two-column-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add some space between the columns */
+    margin-top: 20px;
+}
+
+.column {
+    width: 48%; /* Each column takes up almost half of the available space */
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        margin-left: 10px; /* Reduced margin for smaller devices */
+        margin-right: 10px; /* Reduced margin for smaller devices */
+    }
+
+    .two-column-content {
+        flex-direction: column; /* Stack columns on smaller screens */
+        gap: 20px;
+    }
+
+    .column {
+        width: 100%; /* Full width for each column */
+    }
+}
+
+
